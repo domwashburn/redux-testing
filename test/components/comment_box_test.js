@@ -37,5 +37,10 @@ describe('Comment Box', () => {
 			component.simulate('submit');
 			expect(component.find('textarea')).to.have.value('');
 		});
+
+		it('does not submit when empty', () => {
+			expect(component.find('textarea')).to.not.have.value('');
+			component.simulate('submit');
+		});
 	});
 });
